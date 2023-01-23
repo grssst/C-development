@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+#define yes 1
+#define no 0
+int chek(int id, int pw);
+
+
+int main(int argc, char** argv) {
+int id,pw,re,cnt=1;
+while(1){
+
+printf("ID를 입력하세요  ID:");
+scanf("%d",&id);
+printf("비밀번호를 입력하세요  PW:");
+scanf("%d",&pw);
+re=chek(id,pw);
+
+
+if(re==no)
+{
+printf("\n로그인을 %d회 실패했습니다\n\n",cnt);
+cnt=cnt+1;
+if(cnt==4){
+	printf("\n로그인을 3회 실패하여 더이상 시도할 수 없습니다");
+	break;
+}
+}
+else{
+printf("로그인 되었습니다");
+break;
+}
+
+}
+	return 0;
+}
+
+
+
+int chek(int id, int pw){
+	static int s_id=1234 ,s_pw=1234;
+	if(id==s_id && pw==s_pw)
+	 return yes;
+	else
+	return no;
+}

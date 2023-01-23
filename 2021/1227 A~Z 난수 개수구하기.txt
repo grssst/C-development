@@ -1,0 +1,30 @@
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>   //65~90
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int i,j;
+int a[100];
+int b[100]={0};
+int max=0,mm;
+srand((unsigned)time(NULL));
+
+for(i=0; i<100; i++){
+a[i]=rand()%26+65;
+b[a[i]]=b[a[i]]+1;
+}
+printf("A~Z 100개 난수 발생\n");
+for(j=65; j<91; j++){
+printf("%c=",j);
+printf("%d\n",b[j]);
+if(max<b[j]){
+max=b[j];
+mm=j;
+}
+}
+printf("가장 많이 나온 값은 %c입니다",mm);	
+
+	return 0;
+}

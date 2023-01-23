@@ -1,0 +1,87 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#define SIZE 5
+
+struct com{
+char name[10];
+int exel;
+int acess;
+int common;
+char pass[6];
+int avg;
+};
+
+
+int main(int argc, char** argv) {
+struct com re[SIZE];
+int i,j,cnt=0;
+int rank[5]={1,1,1,1,1};
+int sum[SIZE];
+
+for(i=0; i<SIZE; i++){
+
+	printf("이름:");
+	scanf("%s",re[i].name);
+	printf("엑셀:");
+	scanf("%d",&re[i].exel);
+	printf("엑세스:");
+	scanf("%d",&re[i].acess);
+	printf("컴퓨터일반:");
+	scanf("%d",&re[i].common);
+	re[i].avg=(re[i].exel + re[i].acess + re[i].common)/3;
+	
+
+
+
+	if(re[i].avg >= 60 && re[i].exel>=40 && re[i].acess>=40 && re[i].common>=40){
+	strcpy(re[i].pass,"합격");
+	cnt=cnt+1;
+    }
+	else
+	strcpy(re[i].pass,"불합격");
+
+sum[i]= re[i].exel + re[i].acess + re[i].common;
+
+
+	
+}
+
+for(i=0; i<SIZE; i++){
+	for(j=0; j<SIZE; j++)
+	if(sum[i]<sum[j]){
+	rank[i]=rank[i]+1;
+}
+}
+
+
+
+printf("\n<컴퓨터활용능력 1급 시험 결과>\n합격자수 : %d명\n\n",cnt);
+for(i=0; i<SIZE; i++){
+printf("수험자: %s",re[i].name);
+printf("         평균: %d\n",re[i].avg);
+printf("엑셀: %d",re[i].exel);
+if(re[i].exel<40){
+printf("(과락)");
+printf("    합격여부: %s\n",re[i].pass);
+}
+else
+printf("          합격여부: %s\n",re[i].pass);
+printf("엑세스: %d",re[i].acess);
+if(re[i].acess<40){
+printf("(과락)");
+printf("  등수: %d등\n",rank[i]);
+}
+else
+printf("        등수: %d등\n",rank[i]);
+printf("컴퓨터 일반: %d",re[i].common);
+if(re[i].common<40)
+printf("(과락)");
+printf("\n\n");
+}
+
+	return 0;
+}

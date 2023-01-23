@@ -1,0 +1,38 @@
+#include <iostream>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int sum(int n, int r);
+int get_num(void);
+
+
+
+int main(int argc, char** argv) {
+	int a,b,i,j;
+	
+a=get_num();
+b=get_num();	
+printf("%d",sum(a,b));	
+	
+	return 0;
+}
+
+
+
+
+
+int get_num(void)
+{
+	int n;
+printf("정수: ");
+scanf("%d",&n);
+return n;
+}
+
+int sum(int n, int r)
+{
+	int j=0;
+for(int i=n; i<=r; i++){
+	j=j+i;
+}
+return j;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+int get_num(void);
+int cal(int n, int r);
+
+
+int main(int argc, char** argv) {
+int a,b;
+printf("변경할 첫번째 정수 A");
+a=get_num();	
+printf("변경할 두번째 정수 B");
+b=get_num();
+
+printf("A=%d\nB=%d",cal(b,a),cal(a,b));
+	
+	return 0;
+}
+
+
+
+int get_num(void){
+    int n;
+	printf("=");
+	scanf("%d",&n);
+	printf("\n");
+	return n;
+}
+
+int cal(int n, int r)
+{
+	int data;
+	data=n;
+	n=r;
+	r=data;
+	return data;
+}

@@ -1,0 +1,59 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int a,b,cnt,i,mem,mem_1;
+int bny[10]={0};
+
+
+
+
+
+printf("10진수->16진수 변환기\n원하는 수를 입력하세요.\n");
+while(1){
+bny[10]={0};
+cnt=0;
+i=9;
+printf("입력:");
+scanf("%d",&a);
+mem_1=a;
+
+
+while(1){
+	
+b=a%16;
+a=a/16;
+
+bny[cnt]=b;
+cnt=cnt+1;
+
+if(a==0){
+	break;
+}
+}
+
+while(i>=0){
+if(bny[i]!=0)
+  {
+  mem=i;
+  break;
+  }
+i=i-1;	
+}
+
+printf("%d를 16진수로 변환하면 ",mem_1); 
+
+for(i=mem; i>=0; i--){
+
+if(bny[i]<10)
+printf("%d",bny[i]);
+if(bny[i]>=10 && bny[i]<=15)
+printf("%c",bny[i]+55);
+
+}
+
+printf("\n");
+}
+	return 0;
+} 

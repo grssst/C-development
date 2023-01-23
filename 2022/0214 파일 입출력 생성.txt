@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+
+
+int main(int argc, char** argv) {
+FILE *fp = NULL;
+int c;
+fp=fopen("out.txt","a");
+
+if(fp==NULL)
+printf("파일 열기 실패\n");
+else
+printf("파일 열기 성공\n");
+fprintf(fp,"%d\t%d\t%s\n",999,88,"qqq");
+
+
+	return 0;
+}
+
+

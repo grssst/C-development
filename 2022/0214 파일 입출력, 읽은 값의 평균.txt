@@ -1,0 +1,45 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+
+
+int main(int argc, char** argv) {
+FILE *fp = NULL;
+int i,c,ko,en,sum1,sum2;
+char name[20];
+ko=0;
+
+
+fp=fopen("score.txt","r");
+
+
+while(!feof(fp)){
+
+
+fscanf(fp,"%s %d %d",name,&ko,&en);
+
+printf("%s %d %d\n",name,ko,en);
+
+sum1=sum1+ko;
+sum2=sum2+en;
+
+}
+
+sum1=sum1/5;
+sum2=sum2/5;
+
+
+fclose(fp);	
+
+printf("\n±¹¾î Æò±Õ:%d\n¿µ¾î Æò±Õ:%d",sum1,sum2);
+
+
+
+	return 0;
+}
+
+

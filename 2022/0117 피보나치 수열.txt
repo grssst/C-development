@@ -1,0 +1,28 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int s,aa,ab,a;
+aa=1;
+ab=1;
+s=2;
+printf("1+1+");	
+a=aa+ab;
+
+while(a<89){
+	
+a=aa+ab;
+printf("%d",a);
+if(a!=89)
+printf("+");
+s=s+a;
+aa=ab;
+ab=a;
+
+}
+
+printf("=%d",s);
+
+	return 0;
+}

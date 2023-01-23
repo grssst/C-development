@@ -1,0 +1,63 @@
+#include <stdlib.h>
+#include <string.h>
+#include <math.h> 
+#include <iostream>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+struct report{
+	int kor;
+	int math;
+	char name[10];
+};
+
+
+
+int main(int argc, char** argv) {
+struct report st1,st2,st3;
+
+printf("이름을 입력하세요   이름:");
+scanf("%s",&st1.name);
+printf("\n국어점수를 입력하세요   국어:");
+scanf("%d",&st1.kor);
+printf("\n수학점수를 입력하세요   수학:");
+scanf("%d",&st1.math);
+printf("-------------------------------");
+
+printf("\n이름을 입력하세요   이름:");
+scanf("%s",&st2.name);
+printf("\n국어점수를 입력하세요   국어:");
+scanf("%d",&st2.kor);
+printf("\n수학점수를 입력하세요    수학:");
+scanf("%d",&st2.math);
+printf("-------------------------------");
+
+printf("\n이름을 입력하세요   이름:");
+scanf("%s",&st3.name);
+printf("\n국어점수를 입력하세요   국어:");
+scanf("%d",&st3.kor);
+printf("\n수학점수를 입력하세요   수학:");
+scanf("%d",&st3.math);
+
+
+printf("\n\n-----------------------------------\n");
+printf("성적표\n-----------------------------------\n");
+printf("이름 : %s     국어 : %d     수학 : %d",st1.name,st1.kor,st1.math);
+printf("\n-----------------------------------\n");
+printf("이름 : %s     국어 : %d     수학 : %d",st2.name,st2.kor,st2.math);
+printf("\n-----------------------------------\n");
+printf("이름 : %s     국어 : %d     수학 : %d",st3.name,st3.kor,st3.math);
+printf("\n-----------------------------------");
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+}

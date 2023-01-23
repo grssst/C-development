@@ -1,0 +1,41 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int a,b,i,j,max,save;
+int c[4]={0};
+
+printf("<온라인 투표 시스템>\n\n1번 후보 김□□\n2번 후보 최□□\n3번 후보 이□□");
+printf("\n투표를 하려면 1, 현재화면 또는 투표중에 투표를 마감 하려면 0을 입력하세요.\n입력 : ");
+scanf("%d",&a);
+
+while(i<100){
+switch(a){
+	case 0:
+		break;
+	case 1:
+		printf("원하는 후보의 번호를 입력하세요. ex)1\n 입력 : ");
+		scanf("%d",&b);
+		c[b]=c[b]+1;
+}
+if(a==0 || b==0)
+break;
+}
+
+
+
+for(i=1; i<4; i++)
+		for(j=1; j<4; j++){
+			if(c[i]<c[j]){
+			max=c[j];
+			save=j;
+		}
+		}
+		printf("\n득표수\n1번 %d표\n2번 %d표\n3번 %d표\n\n%d번 후보가 당선되었습니다.",c[1],c[2],c[3],save); 
+	
+
+
+	
+	return 0;
+}

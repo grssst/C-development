@@ -1,0 +1,26 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+char s[]="병찬 70 80";
+char sp[]=" ,\n";
+char *rr;
+int sum=0;
+rr=strtok(s,sp);
+while(rr != NULL){
+	printf("토큰 %s\n",rr);
+
+if(rr != "병찬")
+	sum=sum+rr;
+	printf("<%d>\n",rr);
+
+
+	rr=strtok(NULL,sp);
+	
+}
+printf("%c",sum); 
+
+	return 0;
+}

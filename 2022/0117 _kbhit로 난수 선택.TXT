@@ -1,0 +1,33 @@
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+#include <conio.h>
+
+main() {
+int a,i;
+int b[5][1]={0};
+srand((unsigned)time(NULL));
+i=0;
+
+while(1){
+	a=rand()%1000;
+	printf("%d\n",a);
+	
+	if(kbhit()){
+	b[i][0]=a;
+	
+i=i+1;
+	if(i==5)
+	break;
+}
+}
+
+printf("선택된 값은\n");
+for(i=0; i<5; i++){
+
+printf("%d\n",b[i][0]);
+
+
+}
+    return 0;
+}

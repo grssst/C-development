@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int c;
+char ch[50];
+char a='d';
+char s[]="asdfghj";
+char *p;
+int ioc;
+
+printf("문자 1개입력하기\n");
+c=getch();
+putch(c);
+printf("\n문자열 입력하기\n");
+gets(ch);
+puts(ch);
+
+p=strchr(s,a);
+ioc=int(p-s)+1;
+if(p!=NULL)printf("첫째 %c가 %d번째에서 발견",a,ioc);
+
+
+	return 0;
+}

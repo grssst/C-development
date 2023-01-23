@@ -1,0 +1,25 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int s,i,f;  //2! + 3! + 4! + 5! ~~~~ +20!=S
+i=1;
+f=1;
+s=0;
+
+while(i<20){
+i=i+1;
+f=f*i;
+s=s+f;
+printf("%d!",i);
+
+if(i<20)
+printf("+");
+
+
+
+}
+printf("=%d",s);
+	return 0;
+}

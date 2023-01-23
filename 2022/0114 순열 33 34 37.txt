@@ -1,0 +1,26 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	int tot,a,i;     //33+34+37+42~~~+58=tot
+	a=33;
+	tot=0;
+	i=1;
+	
+	while(1){
+	tot=tot+a;
+	printf("%d",a);
+	
+	if(a!=58)
+	printf("+");
+	
+	a=a+i;
+	i=i+2;
+	
+	if(a>58)
+	break;
+}
+	printf("=%d",tot);
+	return 0;
+}

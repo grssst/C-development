@@ -1,0 +1,30 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#define SIZE 3
+
+struct student{
+	int number;
+	char name[20];
+	double height;
+};
+
+
+int main(int argc, char** argv) {
+struct student a[SIZE];
+
+for(int i=0; i<SIZE; i++){
+	printf("학번을 입력하세요 :");
+	scanf("%d",&a[i].number);
+	printf("이름을 입력하세요 :");
+	scanf("%s",a[i].name);
+	printf("신장을 입력하세요(실수) :");
+	scanf("%lf",&a[i].height); 
+}
+
+for(int i=0; i<SIZE; i++){
+	printf("학번: %d, 이름: %s, 신장: %f \n",a[i].number,a[i].name,a[i].height);
+}
+
+	
+	

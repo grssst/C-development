@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#define SIZE 3
+
+struct exel{
+	char name[20];
+	char gen[10];
+	int paper;
+	int test;
+	int meet;
+	int tot;
+	char rank[6];
+};
+
+
+int main(int argc, char** argv) {
+struct exel result[3];
+int i;
+
+for(i=0; i<SIZE; i++){
+	printf("지원자명:");
+	scanf("%s",result[i].name);
+    printf("성별:");
+	scanf("%s",result[i].gen);
+	printf("서류:");
+	scanf("%d",&result[i].paper);
+	printf("직무평가:");
+	scanf("%d",&result[i].test);
+	printf("면접:");
+	scanf("%d",&result[i].meet);
+	result[i].tot=result[i].meet+result[i].test+result[i].paper;
+	if(result[i].tot>=270){
+		strcpy(result[i].rank,"합격");
+	}
+	else
+	strcpy(result[i].rank,"불합격");
+	
+	printf("\n");
+	}
+
+
+printf("	<신입사원 심사결과>\n");
+printf("|지원자|성별|서류|직무평가|면접|총점|합격여부|\n");
+for(i=0; i<SIZE; i++){
+	printf("%s    %s   %d      %d   %d   %d   %s\n",result[i].name,result[i].gen,result[i].paper,result[i].test,result[i].meet,result[i].tot,result[i].rank);
+} 
+	
+	
+	
+	
+	return 0;
+}

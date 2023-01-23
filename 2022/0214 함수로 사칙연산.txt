@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdio.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+#define OR ||
+#define AND &&
+#define NOT !
+#define IS ==
+#define ISNOT !=
+#define SUM(x,y) ((x)+(y))
+#define AVERAGE(x,y,z) (((x)+(y)+(z))/3)
+#define MAX(x,y) ((x)>(y))?(x):(y) 
+#define MIN(x,y) ((x)<(y))?(x):(y)
+
+
+int search(int list[], int n, int key){
+	int i=0;
+	while(i<n AND list[i] != key)
+	i++;
+	if(i IS n)
+return -1;
+else
+return i;
+}
+
+
+int main(int argc, char** argv) {
+int m[]={1,2,3,4,5,6,7};
+
+printf("%d \n", search(m,sizeof(m)/sizeof(m[0]),5));
+
+
+	return 0;
+}
+
+

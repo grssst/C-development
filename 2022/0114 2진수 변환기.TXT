@@ -1,0 +1,46 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+int a,b,cnt,i,mem,mem_1;
+int bny[10]={0};
+
+
+
+cnt=0;
+i=9;
+printf("10진수->2진수 변환기\n원하는 수를 입력하세요.\n입력:");
+scanf("%d",&a);
+mem_1=a;
+
+
+while(1){
+	
+b=a%2;
+a=a/2;
+bny[cnt]=b;
+cnt=cnt+1;
+
+if(a==0){
+	break;
+}
+}
+
+while(i>=0){
+if(bny[i]!=0)
+  {
+  mem=i;
+  break;
+  }
+i=i-1;	
+}
+
+printf("%d를 2진수로 변환하면 ",mem_1); 
+
+for(i=mem; i>=0; i--)
+printf("%d",bny[i]);
+
+
+	return 0;
+}

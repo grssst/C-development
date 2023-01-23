@@ -1,0 +1,172 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int out(int n);
+int ivl(int n, int r);  //n의 r제곱 
+
+
+
+int main(int argc, char** argv) {
+int i,k;
+while(1){
+for(i=0; i<50; i++)
+char c[50]={0};
+
+printf("10진수로 바꿀 값의 진법     ex)2진법이면 2를 입력\n");
+printf("입력:");
+scanf("%d",&k);
+
+switch(k){
+	
+	case 2:
+	printf("2진수를 입력하세요\n");
+    out(k);
+	break;
+	
+	case 8:
+	printf("8진수를 입력하세요\n");
+    out(k);
+	break;
+		
+	case 16:
+	printf("16진수를 입력하세요\n");
+	out(k);
+	break;
+	
+}
+printf("\n\n");
+}
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+int out(int n){
+	int i,o;
+	int sum=0;
+	int mem;
+	char c[50]={'a'};
+printf("입력:");
+scanf("%s",&c);
+
+switch(n){
+
+case 2:
+for(int i=0; i<50; i++){
+if(c[i]>=0){
+c[i]=c[i]-48;
+}
+}
+for(i=49; i>=0; i--){
+if(c[i]>=0){
+mem=i;     
+break;
+}
+}
+o=0;
+for(i=mem; i>=0; i--){
+	
+	sum=sum+c[o]*ivl(n,i);     //c[1]* 16 * 1
+o=o+1;
+
+} 
+printf("%d",sum);
+break;
+
+
+case 8:
+for(int i=0; i<50; i++){
+if(c[i]>=0){
+c[i]=c[i]-48;
+}
+}
+for(i=49; i>=0; i--){
+if(c[i]>=0){
+mem=i;     
+break;
+}
+}
+o=0;
+for(i=mem; i>=0; i--){
+	
+	sum=sum+c[o]*ivl(n,i);     //c[1]* 16 * 1
+o=o+1;
+
+} 
+printf("%d",sum);
+break;
+
+
+
+case 16:
+
+for(int i=0; i<50; i++){
+if(c[i]=='A'){
+c[i]=10;
+}
+else if(c[i]=='B'){
+c[i]=11;
+}
+else if(c[i]=='C'){
+c[i]=12;
+}
+else if(c[i]=='D'){
+c[i]=13;
+}
+else if(c[i]=='E'){
+c[i]=14;
+}
+else if(c[i]=='F'){
+c[i]=15;
+}
+else if(c[i]>=0){
+c[i]=c[i]-48;
+}
+}
+
+for(i=49; i>=0; i--){
+if(c[i]>=0){
+mem=i;     
+break;
+}
+}
+
+
+o=0;
+for(i=mem; i>=0; i--){
+	
+	sum=sum+c[o]*ivl(n,i);     //c[1]* 16 * 1
+o=o+1;
+
+} 
+printf("%d",sum);
+break;
+}
+}
+
+
+
+
+
+
+
+int ivl(int n, int r)  //n의 r제곱 
+{
+	int result=1;
+	
+for(int i=0; i<r; i++){
+	result=result*n;
+
+}
+return result;
+}

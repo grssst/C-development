@@ -1,0 +1,29 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdlib.h>
+#include <string.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+struct student{
+ int number;
+ char name[10];
+ double height;
+};
+
+
+
+int main(int argc, char** argv) {
+struct student a;
+a.number = 20070001;
+strcpy(a.name,"홍길동");
+a.height = 180.2;
+
+printf("학번: %d\n",a.number);
+printf("이름: %s\n",a.name);
+printf("신장: %f\n",a.height);
+
+	return 0;
+}
+
+
+
